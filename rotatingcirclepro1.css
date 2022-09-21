@@ -1,0 +1,60 @@
+
+		*{
+			padding:0;
+			margin:0;
+		}
+		body
+		{
+			width:60vh;
+			height:100vh;
+			display: flex;
+			flex-direction: column;
+			justify-content: centre;
+			align-items: center;
+		}
+		.outerCircle
+		{
+			width:180px;
+			height:180px;
+			/*background-color: aqua;*/
+			position:relative;
+			/*border-radius: 30%*/
+			/*position:relative;*/
+			/*border:solid black;*/
+
+		}
+		.innerCircle
+		{
+			width:100px;
+			height:100px;
+			position:absolute;
+			animation: rotation 1s infinite linear;
+			border-radius:50%;
+			 padding:20px;
+			border:1px solid silver;
+			left:50%;
+			top:50%;
+			transform: translate(-50%,-50%);
+		}
+		.innerCircle::before
+		{
+			content:'';
+			width:20px;
+			height:20px;
+			background-color: deeppink;
+			position: absolute;
+			left:-20px;
+			top:-20px;
+			border-radius:50%;
+			margin:50px;
+			border:solid green;
+		}
+		@keyframes rotation
+		{
+			0%
+			{
+				transform: translate(-50%,-50%)rotate(-360deg);
+			}
+		}
+	
+		
